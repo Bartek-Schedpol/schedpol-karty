@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#94332f">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<title>Koncepty produktowe Schedpol 2026/27</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1a1a1a;--muted:#6b6b6b;--line:#e4e4e4;--bg:#fff;--soft:#f5f5f4;--accent:#94332f;--r:10px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 "Work Sans",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{max-width:1280px;margin:0 auto;padding:12px 16px 8px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;align-items:flex-start;gap:5px;white-space:nowrap}
+.brand img{display:block;height:34px;width:auto}
+@media (max-width:560px){.brand img{height:28px}}
+.brand small{display:block;font:500 12px/1.3 "Work Sans",sans-serif;letter-spacing:.02em;color:var(--muted)}
+.search{flex:1 1 220px;display:flex;justify-content:flex-end}
+.search input{width:100%;max-width:320px;font:inherit;padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:var(--soft);outline:none}
+.search input:focus{border-color:var(--ink);background:#fff}
+nav{max-width:1280px;margin:0 auto;padding:0 16px 10px;display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:0 0 auto;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:13px;white-space:nowrap}
+nav a b{font-weight:600;color:var(--accent);margin-right:4px}
+nav a:hover{border-color:var(--ink)}
+main{max-width:1280px;margin:0 auto;padding:8px 16px 60px}
+section{padding-top:26px}
+h2{margin:0 0 14px;font:700 22px/1.2 Raleway,sans-serif;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
+h2 .n{color:var(--accent);font-size:15px;letter-spacing:.05em}
+h2 .en{font:italic 400 14px "Work Sans",sans-serif;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+@media (max-width:560px){.grid{grid-template-columns:repeat(2,1fr);gap:10px}h2{font-size:19px}}
+.tile{display:block;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff;cursor:pointer;text-align:left;padding:0;font:inherit;color:inherit;transition:transform .15s,box-shadow .15s}
+.tile:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.tile:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tile img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#fff}
+.tile span{display:block;padding:9px 12px 11px;font:700 15px Raleway,sans-serif;border-top:1px solid var(--line)}
+.empty{color:var(--muted);padding:30px 0;display:none}
+/* podgląd karty */
+.viewer{position:fixed;inset:0;z-index:20;background:rgba(20,20,20,.94);display:none;flex-direction:column}
+.viewer.open{display:flex}
+.vtop{display:flex;align-items:center;gap:8px;padding:10px 12px;color:#fff;padding-top:max(10px,env(safe-area-inset-top))}
+.vtop .t{flex:1;font:700 17px Raleway,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.btn{font:600 13px "Work Sans",sans-serif;color:#fff;background:rgba(255,255,255,.12);border:0;border-radius:999px;padding:8px 13px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.btn:hover{background:rgba(255,255,255,.22)}
+.stage{flex:1;overflow:auto;-webkit-overflow-scrolling:touch;display:flex;justify-content:center;align-items:flex-start;padding:0 8px 12px;touch-action:pan-x pan-y pinch-zoom}
+.stage img{max-height:calc(100vh - 70px);max-width:100%;object-fit:contain;object-position:top;background:#fff;border-radius:4px;box-shadow:0 10px 40px rgba(0,0,0,.4);cursor:zoom-in}
+.stage.multi img{max-height:none;width:min(100%,900px)}
+.stage.zoom img{max-height:none;max-width:none;width:min(1400px,180vw);cursor:zoom-out}
+.nav-arrow{position:fixed;top:50%;transform:translateY(-50%);z-index:21;font-size:26px;line-height:1;padding:12px 14px}
+.prev{left:8px}.next{right:8px}
+@media (max-width:700px){.nav-arrow{display:none}.vtop .btn.hide-s{display:none}}
+footer{max-width:1280px;margin:0 auto;padding:20px 16px 40px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<header>
+  <div class="bar">
+    <div class="brand"><img src="logo.svg" alt="Schedpol – since 1981" width="547" height="99"><small>Koncepty produktowe Schedpol 2026/27</small></div>
+    <div class="search"><input id="q" type="search" placeholder="Szukaj serii, np. 24" aria-label="Szukaj serii" inputmode="search" autocomplete="off"></div>
+  </div>
+  <nav id="nav"></nav>
+</header>
+<main id="main"></main>
+<p class="empty" id="empty" style="max-width:1280px;margin:0 auto;padding:30px 16px">Brak serii o takim numerze.</p>
+<div class="viewer" id="viewer" role="dialog" aria-modal="true" aria-label="Karta produktu">
+  <div class="vtop">
+    <div class="t" id="vt"></div>
+    <a class="btn" id="vpdf" target="_blank" rel="noopener">PDF</a>
+    <button class="btn hide-s" id="vshare" type="button">Udostępnij</button>
+    <button class="btn" id="vclose" type="button" aria-label="Zamknij">✕</button>
+  </div>
+  <div class="stage" id="stage"><img id="vimg" alt=""></div>
+  <button class="btn nav-arrow prev" id="vprev" type="button" aria-label="Poprzednia">‹</button>
+  <button class="btn nav-arrow next" id="vnext" type="button" aria-label="Następna">›</button>
+</div>
+<footer>Schedpol · materiał do prezentacji handlowej. Wymiary w nagłówkach kart w cm, na rysunkach w mm.</footer>
+<script>
+const DATA = [{"num": "01", "pl": "Wanny monolityczne", "en": "Monobloc bathtubs", "items": [{"id": "seria-1", "name": "SERIA 1"}, {"id": "seria-2", "name": "SERIA 2"}, {"id": "seria-3", "name": "SERIA 3"}, {"id": "seria-4", "name": "SERIA 4"}, {"id": "seria-5", "name": "SERIA 5"}]}, {"num": "02", "pl": "Wanny wolnostojące", "en": "Freestanding bathtubs", "items": [{"id": "seria-6", "name": "SERIA 6"}, {"id": "seria-7", "name": "SERIA 7"}, {"id": "seria-8", "name": "SERIA 8"}, {"id": "seria-9", "name": "SERIA 9"}, {"id": "seria-10", "name": "SERIA 10"}, {"id": "seria-11", "name": "SERIA 11"}, {"id": "seria-12", "name": "SERIA 12"}, {"id": "seria-13", "name": "SERIA 13"}, {"id": "seria-14", "name": "SERIA 14"}, {"id": "seria-15", "name": "SERIA 15"}, {"id": "seria-16", "name": "SERIA 16"}, {"id": "seria-17", "name": "SERIA 17"}, {"id": "seria-18", "name": "SERIA 18"}, {"id": "seria-19", "name": "SERIA 19"}, {"id": "seria-20", "name": "SERIA 20"}, {"id": "seria-21", "name": "SERIA 21"}]}, {"num": "03", "pl": "Wanny prostokątne", "en": "Rectangular bathtubs", "items": [{"id": "seria-22", "name": "SERIA 22"}, {"id": "seria-23", "name": "SERIA 23"}, {"id": "seria-24", "name": "SERIA 24"}, {"id": "seria-25", "name": "SERIA 25"}, {"id": "seria-26", "name": "SERIA 26"}, {"id": "seria-27", "name": "SERIA 27"}, {"id": "seria-28", "name": "SERIA 28"}, {"id": "seria-29", "name": "SERIA 29"}, {"id": "seria-30", "name": "SERIA 30"}, {"id": "seria-31", "name": "SERIA 31"}, {"id": "seria-32", "name": "SERIA 32"}, {"id": "seria-33", "name": "SERIA 33"}, {"id": "seria-34", "name": "SERIA 34"}, {"id": "seria-35", "name": "SERIA 35"}, {"id": "seria-36", "name": "SERIA 36"}]}, {"num": "04", "pl": "Wanny asymetryczne", "en": "Asymmetrical bathtubs", "items": [{"id": "seria-37", "name": "SERIA 37"}, {"id": "seria-38", "name": "SERIA 38"}, {"id": "seria-39", "name": "SERIA 39"}, {"id": "seria-40", "name": "SERIA 40"}, {"id": "seria-41", "name": "SERIA 41"}, {"id": "seria-42", "name": "SERIA 42"}, {"id": "seria-43", "name": "SERIA 43"}]}, {"num": "05", "pl": "Wanny symetryczne", "en": "Symmetrical bathtubs", "items": [{"id": "seria-44", "name": "SERIA 44"}, {"id": "seria-45", "name": "SERIA 45"}, {"id": "seria-46", "name": "SERIA 46"}, {"id": "seria-47", "name": "SERIA 47"}, {"id": "seria-48", "name": "SERIA 48"}, {"id": "seria-49", "name": "SERIA 49"}, {"id": "seria-50", "name": "SERIA 50"}, {"id": "seria-51", "name": "SERIA 51"}]}, {"num": "06", "pl": "Kabiny prysznicowe i parawany", "en": "Shower enclosures & screens", "items": [{"id": "seria-52", "name": "SERIA 52"}, {"id": "seria-53", "name": "SERIA 53"}, {"id": "seria-54", "name": "SERIA 54"}, {"id": "seria-55", "name": "SERIA 55"}, {"id": "seria-56", "name": "SERIA 56"}, {"id": "seria-57", "name": "SERIA 57"}, {"id": "seria-58", "name": "SERIA 58"}, {"id": "seria-59", "name": "SERIA 59"}, {"id": "seria-60", "name": "SERIA 60"}, {"id": "seria-61", "name": "SERIA 61"}, {"id": "seria-62", "name": "SERIA 62"}, {"id": "seria-63", "name": "SERIA 63"}, {"id": "seria-64", "name": "SERIA 64"}, {"id": "seria-65", "name": "SERIA 65"}, {"id": "seria-66", "name": "SERIA 66"}, {"id": "seria-67", "name": "SERIA 67"}, {"id": "seria-68", "name": "SERIA 68"}]}, {"num": "07", "pl": "Brodziki akrylowe", "en": "Acrylic shower trays", "items": [{"id": "seria-69", "name": "SERIA 69"}, {"id": "seria-70", "name": "SERIA 70"}, {"id": "seria-71", "name": "SERIA 71"}, {"id": "seria-72", "name": "SERIA 72"}, {"id": "seria-73", "name": "SERIA 73"}, {"id": "seria-74", "name": "SERIA 74"}, {"id": "seria-75", "name": "SERIA 75"}, {"id": "seria-76", "name": "SERIA 76"}, {"id": "seria-77", "name": "SERIA 77"}, {"id": "seria-78", "name": "SERIA 78"}, {"id": "seria-79", "name": "SERIA 79"}, {"id": "seria-80", "name": "SERIA 80"}, {"id": "seria-81", "name": "SERIA 81"}, {"id": "seria-82", "name": "SERIA 82"}, {"id": "seria-83", "name": "SERIA 83"}, {"id": "seria-84", "name": "SERIA 84"}, {"id": "seria-85", "name": "SERIA 85"}, {"id": "seria-86", "name": "SERIA 86"}]}, {"num": "08", "pl": "Brodziki kompozytowe", "en": "Composite shower trays", "items": [{"id": "seria-87", "name": "SERIA 87"}, {"id": "seria-88", "name": "SERIA 88"}, {"id": "seria-89", "name": "SERIA 89"}, {"id": "seria-90", "name": "SERIA 90"}, {"id": "seria-91", "name": "SERIA 91"}, {"id": "seria-92", "name": "SERIA 92"}, {"id": "seria-93", "name": "SERIA 93"}]}, {"num": "09", "pl": "Progi kompozytowe", "en": "Composite shower thresholds", "items": [{"id": "seria-94", "name": "SERIA 94"}, {"id": "seria-95", "name": "SERIA 95"}, {"id": "seria-96", "name": "SERIA 96"}, {"id": "seria-97", "name": "SERIA 97"}, {"id": "seria-98", "name": "SERIA 98"}]}, {"num": "10", "pl": "Akcesoria", "en": "Accessories", "items": [{"id": "akcesoria-stelaze", "name": "Stelaże"}, {"id": "akcesoria-baterie-i-zaglowki", "name": "Baterie i zagłówki"}, {"id": "akcesoria-odplyw-i-hydromasaz", "name": "Odpływ i hydromasaż"}, {"id": "akcesoria-aeromasaz-chromoterapia-dezynfekcja", "name": "Aeromasaż, chromoterapia, dezynfekcja"}]}];
+const flat = [];
+const main = document.getElementById('main'), nav = document.getElementById('nav');
+DATA.forEach(c => {
+  if (!c.items.length) return;
+  const a = document.createElement('a'); a.href = '#k' + c.num; a.innerHTML = `<b>/${c.num}</b>${c.pl}`; nav.appendChild(a);
+  const s = document.createElement('section'); s.id = 'k' + c.num;
+  s.innerHTML = `<h2><span class="n">/${c.num}</span>${c.pl}<span class="en">${c.en}</span></h2><div class="grid"></div>`;
+  const g = s.querySelector('.grid');
+  c.items.forEach(it => {
+    it.idx = flat.length; flat.push(it);
+    const b = document.createElement('button'); b.className = 'tile'; b.type = 'button'; b.dataset.name = it.name.toLowerCase();
+    b.innerHTML = `<img src="min/${it.id}.jpg" alt="${it.name}" loading="lazy" decoding="async"><span>${it.name}</span>`;
+    b.onclick = () => openCard(it.idx);
+    g.appendChild(b);
+  });
+  main.appendChild(s);
+});
+// wyszukiwanie po numerze / nazwie
+const q = document.getElementById('q');
+q.addEventListener('input', () => {
+  const v = q.value.trim().toLowerCase(); let any = false;
+  document.querySelectorAll('section').forEach(sec => {
+    let vis = 0;
+    sec.querySelectorAll('.tile').forEach(t => {
+      const n = t.dataset.name, m = !v || (/^\d+$/.test(v) ? n === 'seria ' + v || n.endsWith(' ' + v) : n.includes(v));
+      t.style.display = m ? '' : 'none'; if (m) vis++;
+    });
+    sec.style.display = vis ? '' : 'none'; if (vis) any = true;
+  });
+  document.getElementById('empty').style.display = any ? 'none' : 'block';
+});
+// podgląd
+const viewer = document.getElementById('viewer'), vimg = document.getElementById('vimg'), stage = document.getElementById('stage');
+let cur = -1;
+function openCard(i, push = true) {
+  cur = (i + flat.length) % flat.length; const it = flat[cur];
+  vimg.src = `podglad/${it.id}.jpg`; vimg.alt = 'Karta ' + it.name;
+  document.getElementById('vt').textContent = it.name;
+  document.getElementById('vpdf').href = `karty/${it.id}.pdf`;
+  stage.classList.remove('zoom'); stage.scrollTo(0, 0);
+  viewer.classList.add('open'); document.body.style.overflow = 'hidden';
+  if (push) history.replaceState(null, '', '#' + it.id);
+  [cur - 1, cur + 1].forEach(j => { const n = flat[(j + flat.length) % flat.length]; new Image().src = `podglad/${n.id}.jpg`; });
+}
+function closeCard() { viewer.classList.remove('open'); document.body.style.overflow = ''; history.replaceState(null, '', location.pathname + location.search); }
+document.getElementById('vclose').onclick = closeCard;
+document.getElementById('vprev').onclick = () => openCard(cur - 1);
+document.getElementById('vnext').onclick = () => openCard(cur + 1);
+vimg.onclick = () => stage.classList.toggle('zoom');
+vimg.onload = () => stage.classList.toggle('multi', vimg.naturalHeight > 1.6 * vimg.naturalWidth);
+document.getElementById('vshare').onclick = async () => {
+  const url = location.href;
+  try { if (navigator.share) await navigator.share({ title: flat[cur].name, url }); else { await navigator.clipboard.writeText(url); alert('Skopiowano link'); } } catch (e) {}
+};
+addEventListener('keydown', e => {
+  if (!viewer.classList.contains('open')) return;
+  if (e.key === 'Escape') closeCard(); if (e.key === 'ArrowLeft') openCard(cur - 1); if (e.key === 'ArrowRight') openCard(cur + 1);
+});
+let sx = null;
+stage.addEventListener('touchstart', e => { sx = e.touches.length === 1 && !stage.classList.contains('zoom') ? e.touches[0].clientX : null; }, { passive: true });
+stage.addEventListener('touchend', e => {
+  if (sx === null) return; const dx = e.changedTouches[0].clientX - sx;
+  if (Math.abs(dx) > 60) openCard(cur + (dx < 0 ? 1 : -1)); sx = null;
+});
+// link do konkretnej karty: …/#seria-12
+function fromHash() { const id = location.hash.slice(1); const it = flat.find(x => x.id === id); if (it) openCard(it.idx, false); }
+addEventListener('hashchange', fromHash); fromHash();
+if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js');
+</script>
+</body>
+</html>
