@@ -30,6 +30,11 @@ nav::-webkit-scrollbar{display:none}
 nav a{flex:0 0 auto;text-decoration:none;color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:5px 11px;font-size:13px;white-space:nowrap}
 nav a b{font-weight:600;color:var(--accent);margin-right:4px}
 nav a:hover{border-color:var(--ink)}
+@media (max-width:699px){.search input{max-width:none}}
+nav a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+nav a.on b{color:#fff}
+@media (min-width:700px){nav{flex-wrap:wrap;overflow:visible}}
+@media (max-width:699px){nav{-webkit-mask-image:linear-gradient(90deg,#000 85%,transparent);mask-image:linear-gradient(90deg,#000 85%,transparent);padding-right:40px}}
 main{max-width:1280px;margin:0 auto;padding:8px 16px 60px}
 section{padding-top:26px}
 h2{margin:0 0 14px;font:700 22px/1.2 Raleway,sans-serif;display:flex;gap:10px;align-items:baseline;flex-wrap:wrap}
@@ -101,6 +106,21 @@ DATA.forEach(c => {
   });
   main.appendChild(s);
 });
+// odstęp przewijania = wysokość przypiętego nagłówka (menu może mieć 1–2 wiersze)
+const hdr = document.querySelector('header');
+const pad = () => document.documentElement.style.scrollPaddingTop = (hdr.offsetHeight + 12) + 'px';
+pad(); addEventListener('resize', pad);
+// bieżąca kategoria w menu
+const chips = [...nav.querySelectorAll('a')];
+const spy = new IntersectionObserver(es => {
+  es.forEach(e => {
+    if (!e.isIntersecting) return;
+    chips.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
+    const on = nav.querySelector('a.on');
+    if (on && nav.scrollWidth > nav.clientWidth) nav.scrollTo({ left: on.offsetLeft - 16, behavior: 'smooth' });
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+document.querySelectorAll('section').forEach(sec => spy.observe(sec));
 // wyszukiwanie po numerze / nazwie
 const q = document.getElementById('q');
 q.addEventListener('input', () => {
