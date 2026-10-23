@@ -108,19 +108,33 @@ DATA.forEach(c => {
 });
 // odstęp przewijania = wysokość przypiętego nagłówka (menu może mieć 1–2 wiersze)
 const hdr = document.querySelector('header');
-const pad = () => document.documentElement.style.scrollPaddingTop = (hdr.offsetHeight + 12) + 'px';
+const secs = [...document.querySelectorAll('section')];
+const pad = () => {
+  document.documentElement.style.scrollPaddingTop = (hdr.offsetHeight + 12) + 'px';
+  // ostatnia kategoria musi dać się przewinąć pod nagłówek (inaczej klik w /10 nic nie robi)
+  const last = secs[secs.length - 1];
+  if (last) last.style.minHeight = Math.max(0, innerHeight - hdr.offsetHeight - 12) + 'px';
+};
 pad(); addEventListener('resize', pad);
-// bieżąca kategoria w menu
+// bieżąca kategoria w menu (wg pozycji przewinięcia)
 const chips = [...nav.querySelectorAll('a')];
-const spy = new IntersectionObserver(es => {
-  es.forEach(e => {
-    if (!e.isIntersecting) return;
-    chips.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + e.target.id));
-    const on = nav.querySelector('a.on');
-    if (on && nav.scrollWidth > nav.clientWidth) nav.scrollTo({ left: on.offsetLeft - 16, behavior: 'smooth' });
-  });
-}, { rootMargin: '-40% 0px -55% 0px' });
-document.querySelectorAll('section').forEach(sec => spy.observe(sec));
+let lockUntil = 0;
+function setOn(id) {
+  chips.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + id));
+  const on = nav.querySelector('a.on');
+  if (on && nav.scrollWidth > nav.clientWidth) nav.scrollTo({ left: on.offsetLeft - 16, behavior: 'smooth' });
+}
+function spy() {
+  if (Date.now() < lockUntil) return;
+  const y = hdr.getBoundingClientRect().bottom + 24;
+  const vis = secs.filter(x => x.style.display !== 'none');
+  let cur = vis[0];
+  for (const x of vis) if (x.getBoundingClientRect().top <= y) cur = x;
+  if (innerHeight + scrollY >= document.documentElement.scrollHeight - 2) cur = vis[vis.length - 1];
+  if (cur) setOn(cur.id);
+}
+addEventListener('scroll', spy, { passive: true }); spy();
+chips.forEach(a => a.addEventListener('click', () => { setOn(a.getAttribute('href').slice(1)); lockUntil = Date.now() + 900; }));
 // wyszukiwanie po numerze / nazwie
 const q = document.getElementById('q');
 q.addEventListener('input', () => {
